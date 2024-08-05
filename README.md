@@ -108,7 +108,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local.
     "description": "Updated description",
     "status": 2
     }
-    ```
+```
 
 5. DELETE /tasks/:id:   -> Elimina una tarea especificada por ID
 
