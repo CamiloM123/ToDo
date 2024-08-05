@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Board from '../components/Board.astro';
+interface Task {
+    title: string;
+    description: string;
+    status: number;
+}
+
+interface Props {
+    tasks: Task[];
+}
+
+const tasks = [
+	{ title: "Navigation update to top bar", description: "Tomorrow", status: 1 },
+	{ title: "Q4 product performance improvements", description: "Today", status: 3},
+	{ title: "Scope Q4 performance improvements", description: "Lorem ipsum", status: 2 },
+	{ title: "Search bar is failing on Safari", description: "Yesterday", status: 2 },
+	{ title: "[Bug] Incorrect font size on Careers page", description: "Today", status: 1  },
+];
+
+---
+
+<Layout title="ToDo App.">
+	<main class="mx-auto py-6 px-3">
+		<div class="mb-10 text-4xl text-center tracking-tight font-semibold ">
+			<h1>Board</h1>
+		</div>	
+		<Board 
+			tasks={tasks}
+		/>
+	</main>
+</Layout>
+
